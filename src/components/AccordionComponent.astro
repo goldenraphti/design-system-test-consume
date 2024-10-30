@@ -1,0 +1,38 @@
+---
+import { accordion } from "@swedbankpay/design-guide";
+
+interface Props {
+	openOnlyOneAtATime: boolean;
+}
+
+const { openOnlyOneAtATime = false } = Astro.props;
+---
+
+<div id="accordion-group-example" class={openOnlyOneAtATime ? `accordion-group` : ""}>
+  <div class="accordion ">
+      <button type="button" class="accordion-header" aria-expanded="false" aria-controls="exp-1">
+          My title
+      </button>
+      <div class="accordion-body" id="exp-1">
+          <p>Proident cupidatat irure excepteur id minim dolore mollit amet reprehenderit consectetur aliqua officia Lorem elit. Cupidatat ea tempor ut esse. Aliquip exercitation in nisi reprehenderit anim Lorem. Excepteur nostrud officia irure tempor aute ipsum. Voluptate nisi incididunt proident enim reprehenderit fugiat fugiat magna sit reprehenderit Lorem anim. Aute commodo cillum nisi consectetur amet eiusmod do tempor incididunt anim.</p>
+      </div>
+  </div>
+  <div class="accordion ">
+      <button type="button" class="accordion-header" aria-expanded="false" aria-controls="exp-2">
+          My title
+      </button>
+      <div class="accordion-body" id="exp-2">
+          <p>Proident cupidatat irure excepteur id minim dolore mollit amet reprehenderit consectetur aliqua officia Lorem elit. Cupidatat ea tempor ut esse. Aliquip exercitation in nisi reprehenderit anim Lorem. Excepteur nostrud officia irure tempor aute ipsum. Voluptate nisi incididunt proident enim reprehenderit fugiat fugiat magna sit reprehenderit Lorem anim. Aute commodo cillum nisi consectetur amet eiusmod do tempor incididunt anim.</p>
+      </div>
+  </div>
+  <div class="accordion ">
+      <button type="button" class="accordion-header" aria-expanded="false" aria-controls="exp-3">
+          My title
+      </button>
+      <div class="accordion-body" id="exp-3">
+          <p>Proident cupidatat irure excepteur id minim dolore mollit amet reprehenderit consectetur aliqua officia Lorem elit. Cupidatat ea tempor ut esse. Aliquip exercitation in nisi reprehenderit anim Lorem. Excepteur nostrud officia irure tempor aute ipsum. Voluptate nisi incididunt proident enim reprehenderit fugiat fugiat magna sit reprehenderit Lorem anim. Aute commodo cillum nisi consectetur amet eiusmod do tempor incididunt anim.</p>
+      </div>
+  </div>
+</div>
+
+<script>accordion.init()</script>
